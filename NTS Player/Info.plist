@@ -9,13 +9,12 @@
 		<key>NSExceptionDomains</key>
 		<dict>
 			<key>ntslive.net</key>
-			<dict/>
-			<key>NSExceptionRequiresForwardSecrecy</key>
-			<string></string>
-			<key>NSExceptionAllowsInsecureHTTPLoads</key>
-			<true/>
-			<key>NSIncludesSubdomains</key>
-			<true/>
+			<dict>
+				<key>NSIncudesSubdomains</key>
+				<true/>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+			</dict>
 		</dict>
 	</dict>
 	<key>LSUIElement</key>

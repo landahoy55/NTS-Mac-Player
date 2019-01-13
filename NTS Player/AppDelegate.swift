@@ -30,13 +30,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //Set up to create a menu bar app.
         
-        //        if let button = statusItem.button {
-        //            button.image = NSImage(named:NSImage.Name("StatusBarButtonImage"))
-        //            button.image?.isTemplate = true
-        //            button.action = #selector(playStation(_:))
-        //        }
-        //
-        //        contructMenu()
+//        if let button = statusItem.button {
+//            button.image = NSImage(named:NSImage.Name("StatusBarButtonImage"))
+//            button.image?.isTemplate = true
+//            button.action = #selector(playStation(_:))
+//        }
+//
+//        contructMenu()
 
         
         
@@ -47,9 +47,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.image?.isTemplate = true
             button.action = #selector(togglePopover(_:))
         }
-        
+
         popover.contentViewController = NowPlayingViewController.freshController()
-        
+    
     }
     
     //Mark:- Functionality for popover app
@@ -95,11 +95,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         switch item.tag {
         case 1:
-            player(url: "http://stream-relay-geo.ntslive.net/stream")
+            player(url: "https://stream-relay-geo.ntslive.net/stream")
         case 2:
-            player(url: "http://stream-relay-geo.ntslive.net/stream2")
+            player(url: "https://stream-relay-geo.ntslive.net/stream2")
         default:
-            player(url: "http://stream-relay-geo.ntslive.net/stream")
+            player(url: "https://stream-relay-geo.ntslive.net/stream")
         }
         
     }

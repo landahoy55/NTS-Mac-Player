@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CollectionViewItem" customModule="NTS_Player" customModuleProvider="target">
+            <connections>
+                <outlet property="artistImageView" destination="JbS-3k-D3W" id="oRn-ZE-ciY"/>
+                <outlet property="channelLabel" destination="Hd1-jO-103" id="umB-X9-5XB"/>
+                <outlet property="cityLabel" destination="cEC-Ce-q1T" id="JhJ-eK-Igm"/>
+                <outlet property="playButton" destination="Upv-aT-Gvt" id="bEV-Do-6Xf"/>
+                <outlet property="timeLabel" destination="iLf-Xy-EPc" id="8l7-gT-UFi"/>
+                <outlet property="titleLabel" destination="vgZ-tz-rEs" id="eLk-ed-DD2"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="290" height="290"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cEC-Ce-q1T">
+                    <rect key="frame" x="8" y="31" width="274" height="17"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="City" id="JVy-1K-gDP">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vgZ-tz-rEs">
+                    <rect key="frame" x="8" y="58" width="274" height="22"/>
+                    <textFieldCell key="cell" title="Title" id="Lfr-zQ-76I">
+                        <font key="font" size="18" name="HelveticaNeue"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iLf-Xy-EPc">
+                    <rect key="frame" x="243" y="263" width="39" height="17"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="10:00" id="pRc-bb-z9f">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Hd1-jO-103">
+                    <rect key="frame" x="8" y="263" width="64" height="17"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="LIVE ON 1" id="Ces-yt-RJy">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JbS-3k-D3W">
+                    <rect key="frame" x="0.0" y="90" width="290" height="163"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="290" id="fdq-Ol-cjH"/>
+                        <constraint firstAttribute="width" secondItem="JbS-3k-D3W" secondAttribute="height" multiplier="16:9" id="hWr-dv-8Bi"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="hkW-oh-Sv3"/>
+                </imageView>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Upv-aT-Gvt">
+                    <rect key="frame" x="10" y="4" width="38" height="19"/>
+                    <buttonCell key="cell" type="roundRect" title="Play" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yXo-J5-Y3Y">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="cellTitle"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="playButton:" target="-2" id="Qh6-Se-ayu"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="iLf-Xy-EPc" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="BO8-Uj-Obu"/>
+                <constraint firstAttribute="trailing" secondItem="iLf-Xy-EPc" secondAttribute="trailing" constant="10" id="IrL-ru-7Cq"/>
+                <constraint firstItem="Upv-aT-Gvt" firstAttribute="top" secondItem="cEC-Ce-q1T" secondAttribute="bottom" constant="8" id="Jqu-bg-MeL"/>
+                <constraint firstAttribute="trailing" secondItem="vgZ-tz-rEs" secondAttribute="trailing" constant="10" id="NB1-sV-FJN"/>
+                <constraint firstItem="JbS-3k-D3W" firstAttribute="top" secondItem="iLf-Xy-EPc" secondAttribute="bottom" constant="10" id="cZW-T4-wrl"/>
+                <constraint firstItem="Hd1-jO-103" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="eiR-yl-xAi"/>
+                <constraint firstItem="vgZ-tz-rEs" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="hm1-qc-sWx"/>
+                <constraint firstItem="cEC-Ce-q1T" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="qho-Ur-Vh6"/>
+                <constraint firstItem="JbS-3k-D3W" firstAttribute="top" secondItem="Hd1-jO-103" secondAttribute="bottom" constant="10" id="qo8-eb-PnO"/>
+                <constraint firstItem="Hd1-jO-103" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="qrg-Rf-QoY"/>
+                <constraint firstItem="vgZ-tz-rEs" firstAttribute="top" secondItem="JbS-3k-D3W" secondAttribute="bottom" constant="10" id="r6p-ro-RUa"/>
+                <constraint firstAttribute="trailing" secondItem="cEC-Ce-q1T" secondAttribute="trailing" constant="10" id="rp6-cM-dFc"/>
+                <constraint firstItem="cEC-Ce-q1T" firstAttribute="top" secondItem="vgZ-tz-rEs" secondAttribute="bottom" constant="10" id="sph-nH-QmC"/>
+                <constraint firstItem="Upv-aT-Gvt" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="y4g-Yf-y79"/>
+                <constraint firstItem="JbS-3k-D3W" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="yud-fv-WU4"/>
+            </constraints>
+        </customView>
+        <collectionViewItem id="ZtZ-ba-CjE" customClass="CollectionViewItem" customModule="NTS_Player" customModuleProvider="target"/>
+    </objects>
+</document>

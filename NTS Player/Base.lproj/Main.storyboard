@@ -680,76 +680,74 @@
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="hh4-MX-T5G">
+            <objects>
+                <viewController id="f4d-oP-NN4" sceneMemberID="viewController">
+                    <view key="view" id="ZPQ-dM-XLA">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="lfM-mB-z4K" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93" y="823"/>
+        </scene>
         <!--Now Playing View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController storyboardIdentifier="NowPlayingViewController" id="XfG-lQ-9wD" customClass="NowPlayingViewController" customModule="NTS_Player" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="350"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tFW-ln-DoO">
-                                <rect key="frame" x="14" y="118" width="45" height="32"/>
-                                <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSGoLeftTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cf4-Cq-aaB">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="previous:" target="XfG-lQ-9wD" id="xTs-Hp-X6v"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ins-1n-m3c">
-                                <rect key="frame" x="421" y="118" width="45" height="32"/>
-                                <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSGoRightTemplate" imagePosition="only" alignment="center" alternateImage="NSGoRightTemplate" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Xbx-gO-Y9M">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="next:" target="XfG-lQ-9wD" id="6eS-Ay-RIX"/>
-                                </connections>
-                            </button>
-                            <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="LWO-gS-NNO">
-                                <rect key="frame" x="71" y="127" width="338" height="17"/>
-                                <textFieldCell key="cell" selectable="YES" alignment="center" title="Multiline Label" id="b9E-f0-7zA">
-                                    <font key="font" metaFont="system"/>
+                            <scrollView wantsLayer="YES" fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esr-QZ-SdK">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <clipView key="contentView" ambiguous="YES" id="wtG-kG-5Bu">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView ambiguous="YES" id="K3c-Jh-3Tj">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="158"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" scrollDirection="horizontal" id="wOR-d2-Zid">
+                                                <size key="itemSize" width="50" height="50"/>
+                                            </collectionViewFlowLayout>
+                                            <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <connections>
+                                                <outlet property="dataSource" destination="XfG-lQ-9wD" id="JQM-Gr-pWm"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="LOY-oA-7e9">
+                                    <rect key="frame" x="1" y="333" width="598" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="i6R-hL-kD3">
+                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RiB-be-5uO">
+                                <rect key="frame" x="10" y="326" width="69" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Hello Mate" id="AwG-Bp-3uW">
+                                    <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MWS-Gt-9kI">
-                                <rect key="frame" x="184" y="13" width="113" height="32"/>
-                                <buttonCell key="cell" type="push" title="Quit Quotes" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XrT-0S-b5x">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="quit:" target="XfG-lQ-9wD" id="nXg-R2-S5E"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <constraints>
-                            <constraint firstItem="tFW-ln-DoO" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="2rN-KE-KF2"/>
-                            <constraint firstAttribute="bottom" secondItem="MWS-Gt-9kI" secondAttribute="bottom" constant="20" id="BmN-DO-dKW"/>
-                            <constraint firstItem="ins-1n-m3c" firstAttribute="leading" secondItem="LWO-gS-NNO" secondAttribute="trailing" constant="20" id="DbI-3X-sS6"/>
-                            <constraint firstItem="ins-1n-m3c" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="SeX-7d-jkk"/>
-                            <constraint firstItem="LWO-gS-NNO" firstAttribute="leading" secondItem="tFW-ln-DoO" secondAttribute="trailing" constant="20" id="UKK-UL-L4e"/>
-                            <constraint firstItem="LWO-gS-NNO" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="afD-PR-7di"/>
-                            <constraint firstItem="MWS-Gt-9kI" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="d5x-v4-Pah"/>
-                            <constraint firstAttribute="trailing" secondItem="ins-1n-m3c" secondAttribute="trailing" constant="20" id="e91-Kb-iNF"/>
-                            <constraint firstItem="tFW-ln-DoO" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="mNC-FB-I4E"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="textLabel" destination="LWO-gS-NNO" id="QgH-D0-DhD"/>
+                        <outlet property="collectionView" destination="K3c-Jh-3Tj" id="aiH-wO-4ud"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="93" y="274"/>
+            <point key="canvasLocation" x="155" y="291"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="NSGoLeftTemplate" width="9" height="12"/>
-        <image name="NSGoRightTemplate" width="9" height="12"/>
-    </resources>
 </document>

@@ -14,6 +14,12 @@
 		F0D2AA4D21AB2E54004BAB67 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D2AA4C21AB2E54004BAB67 /* NowPlayingViewController.swift */; };
 		F0D2AA4F21AB4045004BAB67 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D2AA4E21AB4045004BAB67 /* Quote.swift */; };
 		F0D2AA5121AC95B2004BAB67 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D2AA5021AC95B2004BAB67 /* EventMonitor.swift */; };
+		F0D2AA5321AC9CE4004BAB67 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D2AA5221AC9CE4004BAB67 /* Networking.swift */; };
+		F0F55F5B21B46C28007A0B51 /* CollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F55F5921B46C28007A0B51 /* CollectionViewItem.swift */; };
+		F0F55F5C21B46C28007A0B51 /* CollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F55F5A21B46C28007A0B51 /* CollectionViewItem.xib */; };
+		F0F55F5E21B47C18007A0B51 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F55F5D21B47C18007A0B51 /* ImageView.swift */; };
+		F0F55F6221B9B8C8007A0B51 /* HearerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F55F6121B9B8C8007A0B51 /* HearerView.swift */; };
+		F0F55F6421B9DB65007A0B51 /* StreamPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F55F6321B9DB65007A0B51 /* StreamPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		F0D2AA4C21AB2E54004BAB67 /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
 		F0D2AA4E21AB4045004BAB67 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		F0D2AA5021AC95B2004BAB67 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		F0D2AA5221AC9CE4004BAB67 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		F0F55F5921B46C28007A0B51 /* CollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewItem.swift; sourceTree = "<group>"; };
+		F0F55F5A21B46C28007A0B51 /* CollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewItem.xib; sourceTree = "<group>"; };
+		F0F55F5D21B47C18007A0B51 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		F0F55F6121B9B8C8007A0B51 /* HearerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearerView.swift; sourceTree = "<group>"; };
+		F0F55F6321B9DB65007A0B51 /* StreamPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +53,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F06AE11621EBBC6D005C74A0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F0D2AA4E21AB4045004BAB67 /* Quote.swift */,
+				F0F55F6121B9B8C8007A0B51 /* HearerView.swift */,
+				F0F55F5921B46C28007A0B51 /* CollectionViewItem.swift */,
+				F0F55F5D21B47C18007A0B51 /* ImageView.swift */,
+				F0F55F5A21B46C28007A0B51 /* CollectionViewItem.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F06AE11721EBBC8A005C74A0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F0D2AA4C21AB2E54004BAB67 /* NowPlayingViewController.swift */,
+				F0D2AA3D21AA0443004BAB67 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F06AE11821EBBCBD005C74A0 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				F0D2AA5021AC95B2004BAB67 /* EventMonitor.swift */,
+				F0D2AA5221AC9CE4004BAB67 /* Networking.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
 		F0D2AA2F21AA0443004BAB67 = {
 			isa = PBXGroup;
 			children = (
@@ -60,16 +102,16 @@
 		F0D2AA3A21AA0443004BAB67 /* NTS Player */ = {
 			isa = PBXGroup;
 			children = (
+				F06AE11821EBBCBD005C74A0 /* services */,
+				F06AE11721EBBC8A005C74A0 /* ViewControllers */,
+				F06AE11621EBBC6D005C74A0 /* Views */,
 				F0D2AA4B21AA0BF9004BAB67 /* NTS Player.entitlements */,
 				F0D2AA3B21AA0443004BAB67 /* AppDelegate.swift */,
-				F0D2AA4E21AB4045004BAB67 /* Quote.swift */,
-				F0D2AA4C21AB2E54004BAB67 /* NowPlayingViewController.swift */,
-				F0D2AA5021AC95B2004BAB67 /* EventMonitor.swift */,
-				F0D2AA3D21AA0443004BAB67 /* ViewController.swift */,
 				F0D2AA3F21AA0446004BAB67 /* Assets.xcassets */,
 				F0D2AA4121AA0446004BAB67 /* Main.storyboard */,
 				F0D2AA4421AA0446004BAB67 /* Info.plist */,
 				F0D2AA4521AA0446004BAB67 /* NTS_Player.entitlements */,
+				F0F55F6321B9DB65007A0B51 /* StreamPlayer.swift */,
 			);
 			path = "NTS Player";
 			sourceTree = "<group>";
@@ -139,6 +181,7 @@
 			files = (
 				F0D2AA4021AA0446004BAB67 /* Assets.xcassets in Resources */,
 				F0D2AA4321AA0446004BAB67 /* Main.storyboard in Resources */,
+				F0F55F5C21B46C28007A0B51 /* CollectionViewItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,9 +192,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0F55F5E21B47C18007A0B51 /* ImageView.swift in Sources */,
 				F0D2AA4F21AB4045004BAB67 /* Quote.swift in Sources */,
+				F0F55F6221B9B8C8007A0B51 /* HearerView.swift in Sources */,
+				F0F55F5B21B46C28007A0B51 /* CollectionViewItem.swift in Sources */,
 				F0D2AA5121AC95B2004BAB67 /* EventMonitor.swift in Sources */,
 				F0D2AA3E21AA0443004BAB67 /* ViewController.swift in Sources */,
+				F0F55F6421B9DB65007A0B51 /* StreamPlayer.swift in Sources */,
+				F0D2AA5321AC9CE4004BAB67 /* Networking.swift in Sources */,
 				F0D2AA4D21AB2E54004BAB67 /* NowPlayingViewController.swift in Sources */,
 				F0D2AA3C21AA0443004BAB67 /* AppDelegate.swift in Sources */,
 			);
